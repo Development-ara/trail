@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Subscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           
+        }
+
+        
+        .nav2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .newsletter-section {
+            text-align: center;
+            width:300px;
+            height: 250px;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .newsletter-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .newsletter-section form {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .newsletter-section input {
+            padding: 10px;
+            margin: 5px 0;
+            width: calc(100% - 20px); 
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .newsletter-section button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .newsletter-section button:hover {
+            background-color: #218838;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3f4756;
+            padding: 10px;
+            color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+            mix-blend-mode: color-burn;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .search-bar .search1 {
+            padding: 5px 10px;
+            background-color: #f90;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-signup a, .cart a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img class="nav-logo" src="/Images/image.png"></div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li class="dropdown">
+            <a href="#">Categories</a>
+          </li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <div class="login-signup">
+            <a href="#">Login/Sign Up</a>
+          </div>
+          <div class="cart">
+            <a href="#">Cart (0)</a>
+          </div>
+        </ul>
+        <div class="nav-right">
+          <div class="search-bar">
+            <input type="text" placeholder="Search products" />
+            <button class="search1">Search</button>
+        </div>
+    </div>
+</nav>
+
+    <div class="nav2">
+        <section class="newsletter-section">
+            <h2>Join the Newsletter!</h2>
+            <p>Subscribe to get the latest content by email.</p>
+            <form id="newsletterForm">
+                <input type="text" id="name" placeholder="Your first name" required>
+                <input type="email" id="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+                <div class="error-message" id="errorMessage"></div>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 E-Commerce. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const emailInput = document.getElementById('email');
+            const errorMessage = document.getElementById('errorMessage');
+
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                errorMessage.style.display = 'block';
+                errorMessage.textContent = 'Please enter a valid email address.';
+            } else {
+                errorMessage.style.display = 'none';
+                alert('Thank you for subscribing to our newsletter!');
+            }
+        });
+    </script>
+
+</body>
+</html>

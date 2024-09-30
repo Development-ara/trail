@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .sec2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .review-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            width: 400px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .stars {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .star {
+            font-size: 30px;
+            color: lightgray;
+            transition: color 0.2s;
+        }
+        .star.selected {
+            color: gold;
+        }
+        input[type="text"], textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .sec3 {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .sec3:hover {
+            background-color: #218838;
+        }
+        .review {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            text-align: left;
+        }
+        .sec1 {
+            font-family: Arial, sans-serif;
+            background-color: #3f4756;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3f4756;
+            padding: 10px;
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .nav-logo {
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+            mix-blend-mode: color-burn;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center; 
+        }
+        .search-bar input {
+            padding: 5px;
+            border-radius: 4px;
+            border: none;
+            margin-right: 5px; 
+        }
+        .search-bar .search1 {
+            padding: 5px 10px;
+            background-color: #f90;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+        .search1{
+            transform: translateY(-7px);
+        }
+        .login-signup a, .cart a {
+            color: white;
+            text-decoration: none;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            top: 100%;
+        }
+        .dropdown-content li {
+            margin: 5px 0;
+        }
+        .dropdown-content a {
+            color: white;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="sec1">
+        <nav class="navbar">
+            <div class="logo"><img class="nav-logo" src="/Images/image.png"></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories</a>
+                    <!-- <ul class="dropdown-content">
+                        <li><a href="#">Category 1</a></li>
+                        <li><a href="#">Category 2</a></li>
+                        <li><a href="#">Category 3</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <div class="login-signup">
+                    <a href="#">Login/Sign Up</a>
+                </div>
+                <div class="cart">
+                    <a href="#">Cart (0)</a>
+                </div>
+            </ul>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products" />
+                    <button class="search1">Search</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="sec2">
+        <div class="review-section">
+            <h1>Product Reviews</h1>
+            <div class="review-form">
+                <h2>Leave a Review</h2>
+                <form id="reviewForm">
+                    <div class="stars" id="starRating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <input type="hidden" id="rating" required>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <textarea id="comment" rows="4" placeholder="Your Review" required></textarea>
+                    <button type="submit" class="sec3">Submit Review</button>
+                </form>
+            </div>
+            <h2>Existing Reviews</h2>
+            <div id="reviews">
+               
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingInput = document.getElementById('rating');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-value');
+                ratingInput.value = rating;
+
+                stars.forEach(s => s.classList.remove('selected'));
+                for (let i = 0; i < rating; i++) {
+                    stars[i].classList.add('selected');
+                }
+            });
+        });
+
+        const form = document.getElementById('reviewForm');
+        const reviewsDiv = document.getElementById('reviews');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const rating = ratingInput.value;
+            const comment = document.getElementById('comment').value;
+            
+            const reviewDiv = document.createElement('div');
+            reviewDiv.classList.add('review');
+            reviewDiv.innerHTML = `<strong>${name}</strong> - Rating: ${rating} <br>${comment}`;
+            
+            reviewsDiv.appendChild(reviewDiv);
+            
+
+            form.reset();
+            ratingInput.value = '';
+            stars.forEach(s => s.classList.remove('selected'));
+        });
+    </script>
+</body>
+</html>

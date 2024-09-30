@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="logo"><img class="nav-logo" src="/Images/image.png"></div>
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li class="dropdown">
+          <a href="#">Categories</a>
+          <!-- <ul class="dropdown-content">
+              <li><a href="#">Category 1</a></li>
+              <li><a href="#">Category 2</a></li>
+              <li><a href="#">Category 3</a></li>
+          </ul> -->
+      </li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+  </ul>
+  <div class="nav-right">
+      <div class="login-signup">
+          <a href="#">Login/Sign Up</a>
+      </div>
+      <div class="cart">
+          <a href="#">Cart (0)</a>
+      </div>
+      <div class="search-bar">
+          <input type="text" placeholder="Search products" />
+          <button class="search1">Search</button>
+      </div>
+  </div>
+</nav>
+
+        <!--Images-->
+        <nav class="a1">
+          <ul class="a2">
+              <li class="a3"><img src="/Images/IMG-20240929-WA0012.jpg" alt="" class="a4"><br>Top Offers ﹀</li>
+              <li class="a3"><img src="/Images/IMG-20240929-WA0010.jpg" alt="" class="a4"><br>Mobiles ﹀</li>
+              <li class="a3"><img src="/Images/IMG-20240929-WA0016.jpg" alt="" class="a4"><br>Electronics ﹀</li>
+              <li class="a3"><img src="/Images/IMG-20240929-WA0015.jpg" alt="" class="a4"><br>Fashion ﹀</li>
+              <li class="a3"><img src="/Images/IMG-20240929-WA0014.jpg" alt="" class="a4"><br>Beauty ﹀</li>
+              <li class="a3"><img src="/Images/IMG-20240929-WA0013.jpg" alt="" class="a4"><br>Kitchen ﹀</li>
+              <li class="a3"><img src="/Images/IMG-20240929-WA0011.jpg" alt="" class="a4"><br>Furniture ﹀</li>
+              <li class="a3"><img src="/Images/travel-website-design-and-development.jpg" alt="" class="a4"><br>Travel ﹀</li>
+              <li class="a3"><img src="/Images/668be1eddf76affd65b85734_14 - Is starting a grocery E-commerce Hero.jpg" alt="" class="a4"><br>Grocery ﹀</li>
+          </ul>
+      </nav>
+         <!--Landing Page-->
+         <div class="b4">
+          <div class="b1">
+              <small>Welcome to website</small>
+              <h1 class="b5">ONLINE <span class="b6">SHOPPING</span></h1>
+              <P>Building successful product is challenge. I am highly energetic in user<br>experience design, interface
+                  and web development Lorem ipsum dolor<br>sit amet consectetur adipisicing elit. Laborum, nam voluptas, dolorem</P>
+              <button class="b2" type="button">Shop Now</button>
+              <button class="b3" type="button">Get a Offer</button>
+          </div></div>
+
+
+    <!--Tittle-->
+    <div class="tittle-1">
+      <h1 class="tittle-2">Deals and Offers</h1>
+    </div>
+    
+    <!-- Image slider -->
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide active">
+          <img src="/Images/shopping-time-banner-with-realistic-map-cart-gift-bags-vector-illustration_548887-120.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+          <img src="/Images/9766547.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="/Images/7886375.jpg" alt="Slide 3">
+        </div>
+        <div class="slide">
+          <img src="/Images/9766547.jpg" alt="Slide 4">
+        </div>
+        <div class="slide">
+          <img src="/Images/7886375.jpg" alt="Slide 5">
+        </div>
+      </div>
+    
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    
+      <div class="dots">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+              <!--Dropdown-->
+              <div class="explore">
+                <div class="component1">
+                    <button class="dropbtn">Laptops</button>
+                    <div class="component1-content">
+                        <a href="#">All Laptops</a>
+                        <a href="#">Gaming Laptops</a>
+                        <a href="#">Business Laptops</a>
+                        <a href="#">2-in-1 Laptops</a>
+                        <a href="#">Ultrabooks</a>
+                    </div>
+                </div>
+                <div class="component1">
+                    <button class="dropbtn">Smartphones</button>
+                    <div class="component1-content">
+                        <a href="#">All Smartphones</a>
+                        <a href="#">Android Phones</a>
+                        <a href="#">iPhones</a>
+                        <a href="#">Gaming Phones</a>
+                        <a href="#">5G Phones</a>
+                    </div>
+                </div>
+                <div class="component1">
+                    <button class="dropbtn">Tablets</button>
+                    <div class="component1-content">
+                        <a href="#">All Tablets</a>
+                        <a href="#">Android Tablets</a>
+                        <a href="#">iPads</a>
+                        <a href="#">Windows Tablets</a>
+                        <a href="#">Kids Tablets</a>
+                    </div>
+                </div>
+                <div class="component1">
+                    <button class="dropbtn">Cameras</button>
+                    <div class="component1-content">
+                        <a href="#">All Cameras</a>
+                        <a href="#">DSLR Cameras</a>
+                        <a href="#">Mirrorless Cameras</a>
+                        <a href="#">Action Cameras</a>
+                        <a href="#">Instant Cameras</a>
+                    </div>
+                </div>
+                <div class="component1">
+                    <button class="dropbtn">Accessories</button>
+                    <div class="component1-content">
+                        <a href="#">Headphones</a>
+                        <a href="#">Chargers</a>
+                        <a href="#">Memory Cards</a>
+                        <a href="#">Power Banks</a>
+                        <a href="#">Cables & Adapters</a>
+                    </div>
+                </div>
+            </div>
+       
+         
+
+              
+    <!--Tittle-->
+    <div class="tittle-1">
+      <h1 class="tittle-2">Products</h1>
+    </div>
+    <!--Products-->
+    <section class="featured-products">
+      <h1>Featured Products</h1>
+      <div class="product-container">
+          <div class="product">
+              <img src="https://m.media-amazon.com/images/I/417bPwgyfZL.SY445_SX342_QL70_ML2.jpg" alt="Product 1">
+              <h2>bajaj 23 l convection microwave oven</h2>
+              <p class="price">$49.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/television/r/t/l/-original-imahygbgmyfhggj6.jpeg?q=70&crop=false" alt="Product 2">
+              <h2>Samsung New D Series Brighter Crystal 4K Vision pro</h2>
+              <p class="price">$59.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://pic.made-in-china.com/48f37j00btoUQCIFVzGP/Qualcomm-Tws-Earphones-Anc-Aptx-Ll.jpg" alt="Product 3">
+              <h2>OnePLus Buds Pro 3</h2>
+              <p class="price">$39.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://m.media-amazon.com/images/I/51ZfcpI5lhL.AC_UF894,1000_QL80.jpg" alt="Product 4">
+              <h2>ECOVACS Y1 pro Robotic floor cleaner</h2>
+              <p class="price">$89.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525391_sd.jpg" alt="Product 5">
+              <h2>Apple iPhone 15Plus</h2>
+              <p class="price">$79.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://th.bing.com/th/id/R.7dcd5441940cca5c5416d8ab9f82f16a?rik=gEirL3CBOXeCRw&riu=http%3a%2f%2frukmini1.flixcart.com%2fimage%2f300%2f300%2fxif0q%2frefrigerator-new%2fd%2fs%2fb%2frs78cg8543slhl-1780-3-2023-108-samsung-912-716-original-imagq5c89j6zdhx3.jpeg&ehk=R5qAo6eR5GFbzySZzImUDtm%2bLSgauRjNHPQh88HNRH4%3d&risl=&pid=ImgRaw&r=0" alt="Product 6">
+              <h2>Samsung Frost Free Side by side 3 Star Refrigerator </h2>
+              <p class="price">$99.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://www.eurekaforbes.com/media/catalog/product/cache/5dacb12e56b80562394993655c6849d4/g/l/glory-001.png" alt="Product 7">
+              <h2>Aquaguard Aura 7L RO + UV + UF + MTDS</h2>
+              <p class="price">$69.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/dishwasher-new/m/b/m/-original-imagwbgr3tzuc7ug.jpeg?q=70&crop=false" alt="Product 8">
+              <h2>Crompton FS-DWVOA13PS-ENT Dishwasher</h2>
+              <p class="price">$59.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://www.drele.com/wp-content/uploads/2024/01/Galaxy-S24-Ultra-Titanium-Violet.jpg" alt="Product 9">
+              <h2>Samsung Galaxy S24 5G</h2>
+              <p class="price">$44.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://i5.walmartimages.com/asr/cb8f75e5-1b8e-4c06-9776-0d995a314ada.88ab53492f6fe7e653033585616419b1.jpeg" alt="Product 10">
+              <h2>Apple iPhone 16 Pro Max</h2>
+              <p class="price">$54.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://m.media-amazon.com/images/I/71mS9NSRleL.AC_SS450.jpg" alt="Product 11">
+              <h2>Samsung AI Ecobubble Front Load Washing Machine</h2>
+              <p class="price">$39.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1712991725/Croma%20Assets/Large%20Appliances/Air%20Conditioner/Images/306162_okwjms.png" alt="Product 12">
+              <h2>Lloyd Stellar 6 in 1 Convertible AC</h2>
+              <p class="price">$74.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+      </div>
+  </section>
+    <!--Ratings-->
+      <div class="Ratings-website">
+        <div class="rate-1"><a href="/Sub-Folder/Get-Subscription.html">Subscription</a></div>
+        <div class="rate-1"><a href="/Sub-Folder/Rate-star.html">Rate Us</a></div>
+      </div>
+      <!--Footer section-->
+      <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>ONLINE SHOPPING</h3>
+            <ul>
+              <li>Men</li>
+              <li>Women</li>
+              <li>Kids</li>
+              <li>Home & Living</li>
+              <li>Beauty</li>
+              <li>Gift Cards</li>
+              <li>Myntra Insider</li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>USEFUL LINKS</h3>
+            <ul>
+              <li>Blog</li>
+              <li>Careers</li>
+              <li>Site Map</li>
+              <li>Corporate Information</li>
+              <li>Whitehat</li>
+              <li>Cleanup</li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>CUSTOMER POLICIES</h3>
+            <ul>
+              <li>Contact Us</li>
+              <li>FAQ</li>
+              <li>T&C</li>
+              <li>Track Orders</li>
+              <li>Shipping</li>
+              <li>Cancellations</li>
+              <li>Returns</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>EXPERIENCE OUR APP ON MOBILE</h3>
+            <img src="/Images/IMG-20240929-WA0025.jpg" alt="Google Play" class="store-icon">
+            <img src="Images/IMG-20240929-WA0021.jpg" alt="App Store" class="store-icon">
+            <h3>KEEP IN TOUCH</h3>
+            <div class="social-icons">
+              <img src="/Images/IMG-20240929-WA0023.jpg" alt="Facebook" class="social-icon">
+              <img src="/Images/IMG-20240928-WA0013.jpg" alt="Twitter" class="social-icon">
+              <img src="/Images/IMG-20240929-WA0024.jpg" alt="YouTube" class="social-icon">
+              <img src="/Images/IMG-20240928-WA0007.jpg" alt="Instagram" class="social-icon">
+            </div>
+          </div>
+        </div>
+      
+        <!-- Guarantee Section -->
+        <section class="guarantee-section">
+          <div class="guarantee-item">
+            <img src="/Images/IMG-20240929-WA0026.jpg" alt="100% Original">
+            <div>
+              <h4>100% ORIGINAL</h4>
+              <p>Guarantee for all products at mysite.com</p>
+            </div>
+          </div>
+      
+          <div class="guarantee-item">
+            <img src="/Images/IMG-20240929-WA0022.jpg" alt="14 Days Return">
+            <div>
+              <h4>Return within 14 days</h4>
+              <p>of receiving your order</p>
+            </div>
+          </div>
+        </section>
+      </footer>
+      
+      
+
+        </body>        
+    <script src="/scipt.js"></script>
+</body>
+</html>
