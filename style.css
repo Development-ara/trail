@@ -154,7 +154,6 @@ body {
   .tittle-2{
     color: #f2f2f2;
     animation: slideRight 2s ease forwards;
-    /* filter: drop-shadow(1px 1px 3px rgb(255, 255, 255)); */
     
   }
   @keyframes slideRight{
